@@ -1,12 +1,50 @@
+/* ===== Global Styles (apply everywhere) ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Navigation bar */
+nav {
+  background: #5f033c;
+  padding: 10px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Page-specific Styles ===== */
+/* Tech Hero Page */
 .techHeroImage {
   display: block;
-  border: 3px solid;
+  border: 3px solid; /* can add color if u want*/
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   height: 50%;
 }
-  
+
 .heroParagraph {
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +54,33 @@
     text-align: justify;
 }
 
-h1 {
+/* Home page */
+body.home {
+  background: #eef6ff;
+}
+body.home .introParagraph {
+  width: 60%;
+  margin: 20px auto;
+  font-size: 18px;
   text-align: center;
 }
+body.home .buttonSection {
+  text-align: center;
+  margin: 30px;
+}
+body.home button {
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: #9900b8;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+body.home button:hover {
+  background: #aa1d9e;
+}
+
+
