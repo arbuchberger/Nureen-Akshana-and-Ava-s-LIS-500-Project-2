@@ -1,4 +1,5 @@
 .techHeroImage {
+  display: block;
   border: 3px solid;
   margin-left: auto;
   margin-right: auto;
