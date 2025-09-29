@@ -1,11 +1,12 @@
 /* ===== Global Styles (apply everywhere) ===== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arsenica Antiqua', serif;
   background: #f5f5f5;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   margin-top: 20px;
 }
@@ -15,6 +16,7 @@ nav {
   background: #5f033c;
   padding: 10px;
 }
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -22,14 +24,17 @@ nav ul {
   display: flex;
   justify-content: center;
 }
+
 nav ul li {
   margin: 0 15px;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
+
 nav ul li a:hover {
   text-decoration: underline;
 }
@@ -38,7 +43,8 @@ nav ul li a:hover {
 /* Tech Hero Page */
 .techHeroImage {
   display: block;
-  border: 3px solid; /* can add color if u want*/
+  border: 3px solid;
+  /* can add color if u want*/
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -46,44 +52,162 @@ nav ul li a:hover {
 }
 
 .heroParagraph {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 50%;
-    font-size: 18px;
-    text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  font-size: 18px;
+  text-align: justify;
 }
 
 /* Home page */
+
 body.home {
-  background: #eef6ff;
-}
-body.home .introParagraph {
-  width: 60%;
-  margin: 20px auto;
-  font-size: 18px;
-  text-align: center;
-}
-body.home .buttonSection {
-  text-align: center;
-  margin: 30px;
-}
-body.home button {
-  padding: 12px 24px;
-  margin: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background: #9900b8;
   color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-body.home button:hover {
-  background: #aa1d9e;
+  background-image: url("images/realpweb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 
+/* ===== Home with overlayed text ===== */
+body.home .home-content {
+  position: relative;
+  max-width: 920px;
+  margin: 72px auto 28px;
+  padding: 24px 22px;
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 12px;
+  min-height: auto;
+}
+
+/* subtle dark overlay for readability*/
+body.home .home-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+/* center text on top */
+body.home .home-content {
+  position: relative;
+  /* sits above overlay */
+  z-index: 1;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+body.home .info-card {
+  max-width: 900px;
+  margin: 20px auto 36px;
+  padding: 20px 22px;
+  border-radius: 12px;
+
+  /* overlay look */
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Buttons row */
+body.home .info-actions {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* External link buttons */
+body.home .ext-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #5f033c;
+  /* your nav color */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body.home .ext-btn:hover {
+  background: #7a205e;
+}
+
+/* Mobile tweak */
+@media (max-width: 720px) {
+  body.home .info-card {
+    padding: 16px 14px;
+  }
+}
+
+/* Each image */
+body.home .homeImage {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  /* space between images */
+  margin: 20px auto;
+  max-width: 1100px;
+  /* keeps row from stretching too wide */
+  padding: 0 12px;
+
+  display: block;
+  max-width: 48%;
+  /* two across */
+  width: 100%;
+  height: auto;
+  /* keep proportions */
+}
+
+/* add space under the nav only on the Home page */
+body.home nav {
+  margin-bottom: 24px;
+}
+
+body.about {
+  background-color: #E6E6FA;
+}
+
+body.about .member {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+body.about .member-text {
+  max-width: 620px;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+body.about .member-photo img {
+  display: block;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  border: 3px solid #5f033c;
+  /* matches your nav color */
+  border-radius: 8px;
+}
+
+#akshana_edit
 /*===== Resources Page =====*/
 body.resources {
   background: #fefefe;
@@ -117,4 +241,13 @@ body.resources {
 body.resources h2 {
   text-align: left;
   margin-left: 25%;
+  
+
+/* Stack on small screens */
+@media (max-width: 800px) {
+  body.about .member {
+    flex-direction: column;
+    text-align: left;
+  }
+#main
 }

@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <!-- For UX. If user is using devices other than desktop, it will auto-resize -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Arsenica+Antiqua&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body class="home"> <!-- page-specific class -->
 
   <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
+      <li><a href="AboutMe.html">About Me</a></li>
       <li><a href="resources.html">Resources</a></li>
       <li><a href="techhero.html">Tech Hero</a></li>
     </ul>
   </nav>
-  <!-- Introduction -->
-  <h1>Welcome to Our Project</h1>
 
-  <p class="introParagraph">
-    <!-- HELPPPP -->
-    This is our homepage. We are group of 3 for LIS500....blablablaaa
-  </p>
-  <!-- Buttons on homepage, honestly, it not necessarily has to be this, it can also be sth else -->
-  <div class="buttonSection">
-    <a href="about.html"><button>About Me</button></a>
-    <a href="resources.html"><button>Resources</button></a>
-    <a href="techhero.html"><button>Tech Hero</button></a>
-  </div>
+  <!-- Introduction -->
+  <section class="home">
+    <div class="home-content">
+      <h1>Hi! Welcome to Our Website Project</h1>
+      <p>
+        We’re exploring <strong>intersectionality in technology</strong>! We are learning how identity factors like
+        race, gender, class, ability, religion, and sexuality overlap and shape experiences in tech.
+        Come on in to meet our team, explore resources, and learn from inspiring role models.
+      </p>
+  </section>
+  <!-- Intersectionality Image -->
+  <img src="images/intersectionality_transparent.png" alt="Intersectionality illustration" class="homeImage">
+  <!-- Information Card -->
+  <section class="info-card">
+    <p>
+      Learn more about percentages of women in industry below, and these don’t even include subcategories like race or
+      religion. Can you imagine how much lower the numbers get when identities intersect?
+    </p>
+
+    <div class="info-actions">
+      <a class="ext-btn"
+        href="https://www.isc2.org/Insights/2024/04/Women-in-Cybersecurity-Report-Women-in-the-Profession"
+        target="_blank" rel="noopener">Women in Cybersecurity</a>
+      <a class="ext-btn"
+        href="https://www.8451.com/knowledge-hub/data-science/what-itll-take-to-get-more-women-into-data-science/"
+        target="_blank" rel="noopener">Women in Data Science</a>
+      <a class="ext-btn" href="https://www.bls.gov/blog/2015/women-in-statistics-beyond-the-headline.htm"
+        target="_blank" rel="noopener">Women in Statistics</a>
+    </div>
+  </section>
+
 
 </body>
+
 </html>
