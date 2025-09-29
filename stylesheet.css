@@ -207,10 +207,47 @@ body.about .member-photo img {
   border-radius: 8px;
 }
 
+#akshana_edit
+/*===== Resources Page =====*/
+body.resources {
+  background: #fefefe;
+}
+
+.resourcesIntro {
+  width: 60%;
+  margin: 20px auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.resourcesList {
+  width: 50%;
+  margin: 0 auto 30px auto;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+.resourcesList li {
+  margin: 10px 0;
+}
+.resourcesList a {
+  color: #5f033c;
+  text-decoration: none;
+}
+.resourcesList a:hover {
+  text-decoration: underline;
+}
+
+body.resources h2 {
+  text-align: left;
+  margin-left: 25%;
+  
+
 /* Stack on small screens */
 @media (max-width: 800px) {
   body.about .member {
     flex-direction: column;
     text-align: left;
   }
+#main
 }
