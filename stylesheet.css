@@ -157,34 +157,38 @@ body.home nav {
   margin-bottom: 24px;
 }
 
-body.about {
+body.about,
+body.techHero {
   background-color: #E6E6FA;
 }
 
- body.techHero {
-  background-color: #E6E6FA;
+hr {
+  border: none;
+  border-top: 2px solid #5f033c;
+  margin: 32px auto;
+  width: 80%;
 }
 
 /* Shared layout for member and techHero sections */
-body.about, .member,
-body.techHero, .techHero {
+body.about h1,
+body.techHero h1 {
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Text styling */
+.member,
+.techHero {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  max-width: none;
   margin: 24px auto;
   padding: 0 16px;
 }
 
-body.techHero h1,
-body.about h1 {
-  margin-top: 60px;
-}
-
-/* Text styling */
 .member-text,
 .techHero-text {
   flex: 1 1 400px;
@@ -199,12 +203,11 @@ body.about h1 {
   display: block;
   width: 100%;
   max-width: 300px;
-  height: 320px; /* consistent height */
-  object-fit: cover; /* crops excess */
+  height: 320px; /* consistent height across all images */
+  object-fit: cover; /* crops excess while preserving proportions */
   border: 3px solid #5f033c;
   border-radius: 8px;
 }
-
 
 #akshana_edit
 /*===== Resources Page =====*/
