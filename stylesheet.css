@@ -40,25 +40,6 @@ nav ul li a:hover {
 }
 
 /* ===== Page-specific Styles ===== */
-/* Tech Hero Page */
-.techHeroImage {
-  display: block;
-  border: 3px solid;
-  /* can add color if u want*/
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 50%;
-}
-
-.heroParagraph {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 50%;
-  font-size: 18px;
-  text-align: justify;
-}
 
 /* Home page */
 
