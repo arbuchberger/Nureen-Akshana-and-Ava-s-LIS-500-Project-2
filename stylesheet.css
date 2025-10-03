@@ -237,15 +237,25 @@ body.resources h2 {
   margin-left: 25%;
   
 
-/* Stack on small screens */
 @media (max-width: 800px) {
-  body.about, .member {
-    flex-direction: column;
-    text-align: left;
-  }
+  body.about, .member,
   body.techHero, .techHero {
     flex-direction: column;
     text-align: left;
   }
-#main
+
+  .member-text,
+  .techHero-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .member-photo img,
+  .techHero-photo img {
+    margin-bottom: 16px;
+  }
+
+  #main {
+    padding: 0 16px;
+  }
 }
