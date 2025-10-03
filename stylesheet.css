@@ -165,18 +165,11 @@ body.about {
   background-color: #E6E6FA;
 }
 
-body.about, .member {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 24px auto;
-  padding: 0 16px;
-}
-
+/* Shared layout for member and techHero sections */
+body.about, .member,
 body.techHero, .techHero {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   align-items: center;
   justify-content: center;
@@ -185,39 +178,26 @@ body.techHero, .techHero {
   padding: 0 16px;
 }
 
-.member-text {
-  max-width: 620px;
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: justify;
-}
-
+/* Text styling */
+.member-text,
 .techHero-text {
   max-width: 620px;
   font-size: 18px;
   line-height: 1.6;
   text-align: justify;
+  flex: 1 1 300px;
 }
 
-
-.member-photo img {
-  display: block;
-  max-width: 240px;
-  width: 100%;
-  height: auto;
-  border: 3px solid #5f033c;
-  /* matches our nav color */
-  border-radius: 8px;
-}
-
+/* Image styling */
+.member-photo img,
 .techHero-photo img {
   display: block;
   max-width: 240px;
   width: 100%;
   height: auto;
-  border: 3px solid #5f033c;
-  /* matches our nav color */
+  border: 3px solid #5f033c; /* matches nav color */
   border-radius: 8px;
+  flex: 0 0 auto;
 }
 
 
