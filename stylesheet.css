@@ -170,7 +170,11 @@ hr {
 }
 
 /* Shared layout for member and techHero sections */
-body.about h1,
+body.about h1 {
+  margin-top: 60px;
+  text-align: center;
+}
+
 body.techHero h1 {
   margin-top: 60px;
   text-align: center;
@@ -184,7 +188,7 @@ body.techHero h1 {
   gap: 24px;
   align-items: flex-start;
   justify-content: center;
-  width: 90%;
+  width: 80%;
   margin: 24px auto;
   padding: 0 16px;
 }
