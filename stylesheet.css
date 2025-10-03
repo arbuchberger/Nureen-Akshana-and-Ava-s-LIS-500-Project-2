@@ -11,6 +11,10 @@ h2 {
   margin-top: 20px;
 }
 
+p {
+  font-size = 26px;
+}
+
 /* Navigation bar */
 nav {
   background: #5f033c;
@@ -177,7 +181,6 @@ body.techHero-page h1 {
   padding: 0 16px;
 }
 
-/* Text styling */
 .member,
 .techHero {
   display: flex;
@@ -194,6 +197,7 @@ body.techHero-page h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Text styling */
 .member-text,
 .techHero-text {
   flex: 1 1 400px;
