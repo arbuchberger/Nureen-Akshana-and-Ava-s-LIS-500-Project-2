@@ -163,7 +163,7 @@ body.techHero {
 }
 
 hr {
-  border: none;
+  border: solid;
   border-top: 2px solid #5f033c;
   margin: 32px auto;
   width: 80%;
@@ -184,7 +184,7 @@ body.techHero h1 {
   gap: 24px;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   margin: 24px auto;
   padding: 0 16px;
 }
@@ -255,7 +255,7 @@ body.resources h2 {
 
   .member-text,
   .techHero-text {
-    max-width: 100%;
+    max-width: 80%;
     text-align: left;
   }
 
