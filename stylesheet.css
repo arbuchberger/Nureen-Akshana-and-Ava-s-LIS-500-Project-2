@@ -171,9 +171,10 @@ body.techHero, .techHero {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  max-width: 1000px;
+  width: 100%;
+  max-width: none;
   margin: 24px auto;
   padding: 0 16px;
 }
@@ -181,23 +182,22 @@ body.techHero, .techHero {
 /* Text styling */
 .member-text,
 .techHero-text {
-  max-width: 620px;
+  flex: 1 1 400px;
   font-size: 18px;
   line-height: 1.6;
   text-align: justify;
-  flex: 1 1 300px;
+  padding: 8px;
 }
 
 /* Image styling */
 .member-photo img,
 .techHero-photo img {
   display: block;
-  max-width: 240px;
   width: 100%;
+  max-width: 300px;
   height: auto;
-  border: 3px solid #5f033c; /* matches nav color */
+  border: 3px solid #5f033c;
   border-radius: 8px;
-  flex: 0 0 auto;
 }
 
 
