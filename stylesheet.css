@@ -157,11 +157,11 @@ body.home nav {
   margin-bottom: 24px;
 }
 
-body.about body.techHero {
+body.about, body.techHero {
   background-color: #E6E6FA;
 }
 
-body.about body.techHero .member .techHero {
+body.about, body.techHero, .member, .techHero {
   display: flex;
   gap: 24px;
   align-items: center;
@@ -171,14 +171,14 @@ body.about body.techHero .member .techHero {
   padding: 0 16px;
 }
 
-body.about body.techHero .member-text .techHero-text {
+body.about, body.techHero, .member-text, .techHero-text {
   max-width: 620px;
   font-size: 18px;
   line-height: 1.6;
   text-align: justify;
 }
 
-body.about body.techHero .member-photo img .techHero-photo img {
+body.about, body.techHero, .member-photo img, .techHero-photo img {
   display: block;
   max-width: 240px;
   width: 100%;
@@ -226,7 +226,7 @@ body.resources h2 {
 
 /* Stack on small screens */
 @media (max-width: 800px) {
-  body.about body.techHero .member .techHero {
+  body.about, body.techHero, .member, .techHero {
     flex-direction: column;
     text-align: left;
   }
