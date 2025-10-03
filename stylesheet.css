@@ -187,7 +187,11 @@ body.techHero-page h1 {
   justify-content: center;
   width: 85%;
   margin: 24px auto;
-  padding: 0 16px;
+  padding: 24px;
+  background-color: #fff;
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .member-text,
@@ -208,6 +212,13 @@ body.techHero-page h1 {
   object-fit: cover; /* crops excess while preserving proportions */
   border: 3px solid #5f033c;
   border-radius: 8px;
+}
+
+.member:hover,
+.techHero:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
 
 #akshana_edit
