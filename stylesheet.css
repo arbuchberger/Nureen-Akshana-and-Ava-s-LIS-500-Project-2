@@ -185,14 +185,14 @@ body.techHero, .techHero {
   padding: 0 16px;
 }
 
-body.about, .member-text {
+.member-text {
   max-width: 620px;
   font-size: 18px;
   line-height: 1.6;
   text-align: justify;
 }
 
-body.techHero, .techHero-text {
+.techHero-text {
   max-width: 620px;
   font-size: 18px;
   line-height: 1.6;
@@ -200,7 +200,7 @@ body.techHero, .techHero-text {
 }
 
 
-body.about, .member-photo img {
+.member-photo img {
   display: block;
   max-width: 240px;
   width: 100%;
@@ -210,7 +210,7 @@ body.about, .member-photo img {
   border-radius: 8px;
 }
 
-body.techHero, .techHero-photo img {
+.techHero-photo img {
   display: block;
   max-width: 240px;
   width: 100%;
