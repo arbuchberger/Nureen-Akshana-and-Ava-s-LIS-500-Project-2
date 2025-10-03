@@ -179,6 +179,11 @@ body.techHero, .techHero {
   padding: 0 16px;
 }
 
+body.techHero h1,
+body.about h1 {
+  margin-top: 60px;
+}
+
 /* Text styling */
 .member-text,
 .techHero-text {
@@ -189,13 +194,13 @@ body.techHero, .techHero {
   padding: 8px;
 }
 
-/* Image styling */
 .member-photo img,
 .techHero-photo img {
   display: block;
   width: 100%;
   max-width: 300px;
-  height: auto;
+  height: 320px; /* consistent height */
+  object-fit: cover; /* crops excess */
   border: 3px solid #5f033c;
   border-radius: 8px;
 }
