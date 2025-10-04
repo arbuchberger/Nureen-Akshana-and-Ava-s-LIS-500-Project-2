@@ -234,14 +234,14 @@ body.resources {
 .resourcesIntro {
   width: 60%;
   margin: 20px auto;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
 .resourcesList {
   width: 50%;
   margin: 0 auto 30px auto;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   text-align: left;
 }
