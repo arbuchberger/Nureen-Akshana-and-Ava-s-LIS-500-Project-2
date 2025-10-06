@@ -306,4 +306,231 @@ body.resources ul.resourcesList a {
 body.resources ul.resourcesList a:hover {
   color: #b84b91;
   text-decoration: underline;
-}
+
+  /* ===== Mobile / Small Screens ===== */
+  @media (max-width: 860px) {
+
+    /* Global text */
+    h1,
+    h2 {
+      margin-top: 16px;
+      padding: 0 12px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    /* Nav: keep centered, give touch-friendly spacing */
+    nav {
+      padding: 12px;
+    }
+
+    nav ul {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 6px 10px;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 6px 8px;
+    }
+
+    /* Shared card width tighter on small screens */
+    .member,
+    .techHero,
+    body.resources .resourcesIntro,
+    body.resources .resourcesList,
+    body.resources ul.resourcesList,
+    body.home .homeImage,
+    hr {
+      width: 94%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Member/Tech hero: stack image over text */
+    .member,
+    .techHero {
+      flex-direction: column;
+      text-align: center;
+      padding: 16px;
+      gap: 16px;
+    }
+
+    .member-photo,
+    .techHero-photo {
+      flex: 0 0 auto;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .member-photo img,
+    .techHero-photo img {
+      max-width: 360px;
+      height: auto;
+      aspect-ratio: 3 / 3.2;
+      object-fit: cover;
+    }
+
+    .member-text,
+    .techHero-text {
+      flex: 1 1 auto;
+      font-size: 17px;
+      line-height: 1.6;
+      padding: 0 6px;
+    }
+
+    /* Home overlay cards */
+    body.home .home-content {
+      margin: 56px auto 20px;
+      padding: 18px 16px;
+      max-width: 94%;
+    }
+
+    body.home .info-card {
+      margin: 16px auto 28px;
+      padding: 16px 14px;
+    }
+
+    body.home .info-actions {
+      gap: 8px;
+    }
+
+    body.home .ext-btn {
+      padding: 10px 14px;
+      font-size: 15px;
+    }
+
+    /* Resources list: bigger tap area, centered lines already set */
+    body.resources ul.resourcesList li {
+      margin: 10px 0;
+    }
+
+    body.resources ul.resourcesList a {
+      display: inline-block;
+      padding: 6px 8px;
+    }
+
+    /* Softer effects on mobile GPUs */
+    .member,
+    .techHero,
+    body.resources .resourcesIntro,
+    body.resources .resourcesList,
+    body.resources ul.resourcesList,
+    body.home .info-card {
+      backdrop-filter: blur(1.5px);
+      -webkit-backdrop-filter: blur(1.5px);
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    /* Slightly smaller headings & text */
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+
+    /* Nav becomes two rows if needed */
+    nav ul {
+      justify-content: center;
+    }
+
+    /* Home hero image keeps radius, fills width */
+    body.home .homeImage {
+      width: 94%;
+      margin: 14px auto;
+    }
+
+    /* Borders & shadows lighter for compact look */
+    .member,
+    .techHero,
+    body.resources .resourcesIntro,
+    body.resources .resourcesList,
+    body.resources ul.resourcesList {
+      border-width: 1.5px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+    }
+
+    hr {
+      width: 94%;
+      margin: 24px auto;
+      border-width: 1.5px;
+    }
+  }
+
+  @media (max-width: 420px) {
+
+    /* Tighter typography on very small phones */
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p,
+    .member-text,
+    .techHero-text {
+      font-size: 16px;
+    }
+
+    nav ul li {
+      margin: 4px 6px;
+    }
+
+    nav ul li a {
+      padding: 6px 6px;
+      font-weight: 600;
+    }
+
+    /* Buttons readable but compact */
+    body.home .ext-btn {
+      padding: 9px 12px;
+      font-size: 14px;
+    }
+
+    /* Images: limit height to avoid tall scroll on first paint */
+    .member-photo img,
+    .techHero-photo img {
+      max-width: 320px;
+      max-height: 300px;
+    }
+  }
+
+  /* ===== Motion & heavy effects accessibility ===== */
+  @media (prefers-reduced-motion: reduce) {
+
+    .member:hover,
+    .techHero:hover {
+      transform: none;
+      transition: none;
+    }
+  }
+
+  @media (prefers-contrast: more) {
+
+    .member,
+    .techHero,
+    body.resources .resourcesIntro,
+    body.resources .resourcesList,
+    body.resources ul.resourcesList,
+    body.home .info-card {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: #a34783;
+      /* slightly brighter edge for contrast */
+    }
+  }
