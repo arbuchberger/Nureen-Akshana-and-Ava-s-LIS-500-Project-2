@@ -131,29 +131,40 @@ body.home .ext-btn:hover {
   }
 }
 
-/* Home: single hero image sized like the cards */
+/* === HERO IMAGE: center + shrink (works for both patterns) === */
 body.home .homeImage {
-  width: 85%;
-  /* aligns with your .member/.techHero width */
-  max-width: 1100px;
-  /* cap so it never gets huge */
+  /* works if .homeImage is wrapper or the <img> */
+  display: block;
   margin: 20px auto;
-  /* center the block */
-  padding: 0;
-  /* keep edges clean */
-  display: block;
+  max-width: 900px;
+  width: clamp(280px, 68vw, 900px);
 }
 
-body.home .homeImage img {
+body.home .homeImage img,
+body.home img.homeImage {
   display: block;
-  width: 100%;
-  /* fill the container */
-  height: auto;
-  /* preserve aspect ratio */
+  margin: 0 auto;
+  width: auto !important;
+  /* override old width:100% */
+  height: auto !important;
+  max-width: min(90vw, 900px);
+  max-height: 50vh;
+  /* adjust this to taste */
+  object-fit: contain;
   border-radius: 12px;
-  /* optional, to match style */
 }
 
+/* Optional: slightly smaller on very wide screens */
+@media (min-width: 1200px) {
+  body.home .homeImage {
+    width: clamp(280px, 56vw, 820px);
+  }
+
+  body.home .homeImage img,
+  body.home img.homeImage {
+    max-height: 44vh;
+  }
+}
 
 /* add space under the nav only on the Home page */
 body.home nav {
