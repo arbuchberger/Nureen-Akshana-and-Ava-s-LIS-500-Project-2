@@ -268,17 +268,42 @@ body.resources .resourcesList {
   text-align: center;
 }
 
-/* keep list readable inside the overlay */
-body.resources .resourcesList {
+/* Resources: centered lines with bullets */
+body.resources ul.resourcesList {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, .35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  line-height: 1.6;
+
+  list-style: none;
+  /* turn off native bullets */
   text-align: center;
+  /* center each line */
 }
 
-body.resources .resourcesList a {
+body.resources ul.resourcesList li {
+  margin: 8px 0;
+}
+
+body.resources ul.resourcesList li::before {
+  content: "•";
+  /* custom bullet */
+  display: inline-block;
+  margin-right: .5em;
+}
+
+body.resources ul.resourcesList a {
   color: #fff;
   text-decoration: none;
 }
 
-body.resources .resourcesList a:hover {
+body.resources ul.resourcesList a:hover {
   color: #b84b91;
   text-decoration: underline;
 }
