@@ -2,7 +2,12 @@
 body {
   margin: 0;
   font-family: 'Arsenica Antiqua', serif;
-  background: #f5f5f5;
+  background-image: url("images/realpweb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
 }
 
 h1,
@@ -47,16 +52,6 @@ nav ul li a:hover {
 /* ===== Page-specific Styles ===== */
 
 /* Home page */
-
-body.home {
-  color: white;
-  background-image: url("images/realpweb.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
 
 /* ===== Home with overlayed text ===== */
 body.home .home-content {
@@ -136,36 +131,35 @@ body.home .ext-btn:hover {
   }
 }
 
-/* Each image */
+/* Home: single hero image sized like the cards */
 body.home .homeImage {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  /* space between images */
-  margin: 20px auto;
+  width: 85%;
+  /* aligns with your .member/.techHero width */
   max-width: 1100px;
-  /* keeps row from stretching too wide */
-  padding: 0 12px;
-
+  /* cap so it never gets huge */
+  margin: 20px auto;
+  /* center the block */
+  padding: 0;
+  /* keep edges clean */
   display: block;
-  max-width: 48%;
-  /* two across */
-  width: 100%;
-  height: auto;
-  /* keep proportions */
 }
+
+body.home .homeImage img {
+  display: block;
+  width: 100%;
+  /* fill the container */
+  height: auto;
+  /* preserve aspect ratio */
+  border-radius: 12px;
+  /* optional, to match style */
+}
+
 
 /* add space under the nav only on the Home page */
 body.home nav {
   margin-bottom: 24px;
 }
 
-body.about,
-body.techHero {
-  background-color: #E6E6FA;
-}
 
 hr {
   border: 2px solid #5f033c;
@@ -178,104 +172,113 @@ hr {
 .member,
 .techHero {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  /* vertical centering for the photo */
+  justify-content: space-between;
   gap: 24px;
-  align-items: flex-start;
-  justify-content: center;
+  flex-wrap: wrap;
   width: 85%;
   margin: 24px auto;
   padding: 20px;
-  background-color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border: 2px solid #5f033c;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Text styling */
+.member:hover,
+.techHero:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .15);
+  transform: translateY(-2px);
+  transition: all .3s ease;
+}
+
+/* Center the image in its box */
+.member-photo,
+.techHero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 320px;
+  /* keeps image area consistent */
+}
+
+/* Image itself */
+.member-photo img,
+.techHero-photo img {
+  width: 100%;
+  max-width: 300px;
+  height: 320px;
+  object-fit: cover;
+  border: 3px solid #5f033c;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Text area */
 .member-text,
 .techHero-text {
   flex: 1 1 400px;
   font-size: 18px;
   line-height: 1.6;
-  text-align: left;
-  padding: 8px;
-}
-
-.member-photo img,
-.techHero-photo img {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  height: 320px; /* consistent height across all images */
-  object-fit: cover; /* crops excess while preserving proportions */
-  border: 3px solid #5f033c;
-  border-radius: 8px;
-}
-
-.member:hover,
-.techHero:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-
-#akshana_edit
-/*===== Resources Page =====*/
-body.resources {
-  background: #fefefe;
-}
-
-.resourcesIntro {
-  width: 60%;
-  margin: 20px auto;
-  font-size: 20px;
   text-align: center;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
 }
 
-.resourcesList {
-  width: 50%;
-  margin: 0 auto 30px auto;
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: left;
+.member-text ul,
+.techHero-text ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
 }
-.resourcesList li {
-  margin: 10px 0;
+
+.techHero a,
+.member a {
+  color: white;
+  font-weight: bold;
 }
-.resourcesList a {
-  color: #5f033c;
-  text-decoration: none;
-}
-.resourcesList a:hover {
+
+.techHero a:hover,
+.member a:hover {
+  color: #b84b91;
+  /* lighter hover tone */
   text-decoration: underline;
 }
 
-body.resources h2 {
-  text-align: left;
-  margin-left: 25%;
+/*===== Resources Page =====*/
+/* Resources page overlays */
+body.resources .resourcesIntro,
+body.resources .resourcesList {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;
+  /* places them below the heading */
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: #fff;
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  line-height: 1.6;
+  text-align: center;
 }
 
-@media (max-width: 800px) {
-  .member,
-  .techHero {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
+/* keep list readable inside the overlay */
+body.resources .resourcesList {
+  text-align: center;
+}
 
-  .member-text,
-  .techHero-text {
-    max-width: 85%;
-    text-align: left;
-  }
+body.resources .resourcesList a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  .member-photo img,
-  .techHero-photo img {
-    margin-bottom: 16px;
-  }
-
-  body.about #main,
-  body.techHero-page #main {
-    padding: 0 16px;
-  }
+body.resources .resourcesList a:hover {
+  color: #b84b91;
+  text-decoration: underline;
 }
