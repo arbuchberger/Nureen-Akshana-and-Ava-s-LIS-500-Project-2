@@ -1,2 +1,3 @@
-# Nureen, Akshana, and Ava's LIS 500 Project 2
+# Nureen, Akshana, and Ava's LIS 500 Project 3
+In this project, we are teaching our machine to ...
 
