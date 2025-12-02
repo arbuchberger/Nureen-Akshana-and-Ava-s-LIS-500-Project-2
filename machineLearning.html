@@ -80,18 +80,17 @@
             </p>
 
             <h2>Project Goals</h2>
-            <p>
-                <ul>
-                    <li>Accessibility: Enable communication for deaf, mute, and partially hearing individuals without requiring an interpreter.</li>
-                    <li>Inclusivity: Design algorithms that recognize diverse hand positions and variations, ensuring learners and non-standard
-                        users are not penalized.</li>
-                    <li>Justice in Technology: Embed Buolamwini’s call for fairness, transparency, and accountability into every stage of development.</li>
-                </ul>
-            </p>
+            <ul>
+                <li>Accessibility: Enable communication for deaf, mute, and partially hearing individuals without requiring an interpreter.</li>
+                <li>Inclusivity: Design algorithms that recognize diverse hand positions and variations, ensuring learners and non-standard
+                    users are not penalized.</li>
+                <li>Justice in Technology: Embed Buolamwini’s call for fairness, transparency, and accountability into every stage of development.</li>
+            </ul>
             <h2>Incorporating Buolamwini’s Ideals</h2>
             <p> 
                 Buolamwini prescribes a lifecycle approach to accountability: audit models before and after deployment, document datasets, measure performance 
                 across demographic slices, and involve impacted communities. We incorporated these principles in several ways:
+            </p>
                 <ul>
                     <li>Dataset Diversity: Instead of privileging background or skin tone, we trained the model on varied hand positions.</li>
                     <li>Transparency: We documented training decisions, including which letters were attempted, which hand positions were included,
@@ -99,7 +98,7 @@
                     <li>Community-Centered Design: Though early in development, we envision involving deaf and mute individuals directly in testing and feedback.</li>
                     <li>Performance Across Variations: By including non-standard hand placements, we ensured the system could serve learners and those with physical differences.</li>
                 </ul>
-            </p>
+            
             <p>These decisions were deliberate: we prioritized the diversity of hand shapes and positions over background uniformity, recognizing 
                 that users will inevitably present a wide range of lighting conditions, skin tones, and camera qualities. The goal was to reduce 
                 exclusion and improve real-world usability, even at the prototype stage.
@@ -134,17 +133,17 @@
                 differential performance that could harm the users most in need of assistance.
             </p>
             <h2>Lessons from Buolamwini's Works</h2>
+            <ul>
+                <li>Bias is Structural, Not Accidental: Just as facial recognition systems failed for darker-skinned women, ASL recognition could
+                    fail for users with non-standard hand positions or different skin tones.</li>
+                <li>Accuracy does not equal Justice: A model that recognizes signs perfectly for one group but fails for another is not “successful.”</li>
+                <li>Transparency Builds Trust: Documenting datasets and training decisions ensures accountability and allows others to critique and 
+                    improve the system.</li>
+                <li>Community Participation is Essential: Impacted groups must guide design. For ASL recognition, deaf and mute individuals should shape 
+                    priorities and evaluate usability.</li>
+                <li>Accountability Across the Lifecycle: Pre-deployment audits, ongoing evaluation, and post-deployment monitoring are required to catch drift and inequities.</li>
+            </ul>
             <p>
-                <ul>
-                    <li>Bias is Structural, Not Accidental: Just as facial recognition systems failed for darker-skinned women, ASL recognition could
-                        fail for users with non-standard hand positions or different skin tones.</li>
-                    <li>Accuracy does not equal Justice: A model that recognizes signs perfectly for one group but fails for another is not “successful.”</li>
-                    <li>Transparency Builds Trust: Documenting datasets and training decisions ensures accountability and allows others to critique and 
-                        improve the system.</li>
-                    <li>Community Participation is Essential: Impacted groups must guide design. For ASL recognition, deaf and mute individuals should shape 
-                        priorities and evaluate usability.</li>
-                    <li>Accountability Across the Lifecycle: Pre-deployment audits, ongoing evaluation, and post-deployment monitoring are required to catch drift and inequities.</li>
-                </ul>
             Most importantly, we learned that machine learning is never neutral. Every choice, such as which signs to include, which hand positions to train, which platform to use,
             embeds values. By consciously embedding values of accessibility and justice, we align our project with Buolamwini’s vision of technology as a civil rights tool.
             </p>
