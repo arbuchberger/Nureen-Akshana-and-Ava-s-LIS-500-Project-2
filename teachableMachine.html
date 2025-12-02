@@ -1,12 +1,15 @@
+
+  <<!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="stylesheet.css">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Try Our Model!</title>
   <link rel="stylesheet" href="stylesheet.css">
-  
 </head>
- <!-- Navigation Bar -->
+<body class="teachable">
+
+  <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -14,6 +17,57 @@
       <li><a href="resources.html">Resources</a></li>
       <li><a href="techHero.html">Tech Heroes</a></li>
       <li><a href="machineLearning.html">Machine Learning</a></li>
+      <li><a href="teachableMachine.html">Try Our Model!</a></li>
     </ul>
   </nav>
+
+  <main>
+
+    <!-- Header -->
+    <header class="teachableIntro">
+      <h1>Sign Language Interpreter</h1>
+      <h2>Watch our demo below!</h2>
+    </header>
+<!-- Resources Intro -->
+    <section class="teachableInfo">
+      <p>
+        Our project, focused on American Sign Language (ASL) recognition, draws inspiration from Buolamwini’s ideals. We aim to 
+        create algorithms that give mute and deaf individuals a “voice” in spaces where interpreters are unavailable, helping them 
+        communicate more freely in everyday and professional life. This project is not only technical but also ethical: it embodies 
+        the principle that technology should empower marginalized communities rather than exclude them.
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-container-teachable">
+      <video controls>
+        <source src="images/vandana.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+     <section class="teachableIntro">
+            <h2>Technical Process</h2>
+            <p>
+                We used Google’s Teachable Machine to prototype recognition. The tool allowed us to train on snapshots of hand shapes but not motion.
+                We tested multiple hand positions for letters at the beginning of the alphabet, but the model became too large to export fully. Despite 
+                these constraints, we prioritized inclusivity over efficiency.
+            </p>
+            <p>
+                This mirrors Buolamwini’s lesson that justice must guide design choices. Even when technical limitations exist, we chose to emphasize 
+                accessibility for diverse users rather than optimizing for speed or compactness. Our documentation includes the classes trained, dataset 
+                counts per class, environmental conditions (lighting/background), and known edge cases. This recordkeeping supports future audits and 
+                collaborative improvement.
+            </p>
+        </section>
+
+        <section class="teachableIntro">
+          <h2>Try it yourself!</h2>
+          <p>
+            <a class="teachable-btn" href="https://teachablemachine.withgoogle.com/models/LVC-SbUnt/" target="_blank">Open the Model</a>
+          </p>
+        </section>
+    
+  </main>
+
+</body>
 </html>
