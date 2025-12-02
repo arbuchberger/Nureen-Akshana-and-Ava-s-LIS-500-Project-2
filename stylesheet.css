@@ -617,3 +617,132 @@ body.mlpage .video-container iframe {
   border: 0;
   border-radius: 8px;
 }
+
+.video-container-teachable {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    margin: 20px 0; /* optional spacing above and below */
+}
+
+/*TEACHABLE MACHINE PAGE
+
+/* Make the video responsive */
+.video--container-teachable video {
+    max-width: 100%; /* prevents video from overflowing the page */
+    height: auto;    /* keeps the aspect ratio */
+    border: 2px solid #ccc; /* optional: adds a border to the video */
+    border-radius: 8px;     /* optional: rounded corners */
+}
+
+/*===== Teachable Model Page =====*/
+body.teachable header,
+body.teachable .video-container-teachable {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: #fff;
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Center the video */
+body.teachable .video-container-teachable {
+  display: flex;
+  justify-content: center; /* center horizontally */
+}
+
+body.teachable .video-container-teachable video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #5f033c;
+  border-radius: 8px;
+}
+
+body.teachable .teachableIntro,
+body.teachable .teachableInfo {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: #fff;
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+body.mlpage .mlIntro,
+body.mlpage .mlSection {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;          /* centers the box */
+  padding: 20px 22px;         /* inside spacing */
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: #fff;
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  line-height: 1.6;
+  text-align: center;         /* same as resources page */
+  box-sizing: border-box;
+}
+
+/* Blockquote styling (like ML quotes on resources page) */
+body.mlpage .mlquote {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;
+  padding: 20px 22px;
+  background: rgba(95, 3, 60, 0.5);
+  border-left: 4px solid #b84b91;
+  color: #fff;
+  border-radius: 8px;
+  font-style: italic;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Video container styled like resources page */
+body.mlpage .video-container {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;
+  padding: 0;                 /* optional: videos usually don't need extra padding */
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  text-align: center;
+}
+
+body.mlpage .video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.teachable-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #5f033c; /* same as your nav color */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.teachable-btn:hover {
+  background-color: #b84b91; /* lighter hover color */
+}
