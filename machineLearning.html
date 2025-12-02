@@ -63,39 +63,116 @@
         </header>
 
         <article>
+            <h2>Introduction</h2>
             <p>
-                Dr. Joy Buolamwini, a computer scientist and founder of the Algorithmic Justice League, argues that machine
-                learning systems do not exist in a vacuum. Instead, they reflect the data, design choices, and power structures that
-                create them. Her point of view emphasizes that “accuracy” alone is not enough, models can be highly accurate on the
-                groups they see most and still fail and harm those they underrepresent. Drawing from her research on facial
-                analysis, she shows how skewed training data can lead to dramatically higher error rates for darker-skinned women
-                compared with lighter-skinned men, underscoring that bias is a measurable technical risk and a civil-rights issue.
-                Pertaining to our project, we greatly support creating more equal and just algorithms for those who are 
-                underrepresented in our society, in particular, those who are mute. It highly focuses on making current 
-                inaccessible spaces into accessible spaces for deaf and mute people along with those with partial hearing loss
-                without an American Sign Language (ASL) interpreter, giving a "voice" to the voiceless. Thus, this helps them
-                communicate with others who do not have these disabilities and gain more power in everyday life and in their
-                professional lives as well. 
-            </p>
+               Dr. Joy Buolamwini, computer scientist and founder of the Algorithmic Justice League, has shown the world that 
+               machine learning systems are never neutral. They reflect the data, design choices, and power structures that shape 
+               them. In Unmasking AI, she demonstrates how “accuracy” alone is insufficient: models can perform well on majority 
+               groups yet fail dramatically for those underrepresented. Her research on facial analysis revealed error rates 
+               disproportionately higher for darker-skinned women compared to lighter-skinned men, reframing bias as both a technical 
+               risk and a civil rights issue.
 
             <p>
-                Similarly, Buolamwini’s prescription is a lifecycle approach to accountability: audit models before and after
-                deployment, document datasets and training decisions, measure performance across demographic slices, and give
-                impacted communities a seat at the table. She advocates for transparency, meaningful contestability when systems 
-                make mistakes, and regulatory guardrails that match the stakes of real-world use. Overall, her POV reframes ML 
-                progress as not just making models bigger or faster, but making them <em>more just</em> through inclusive data, 
-                rigorous evaluation, clear disclosure, and consequences when systems cause harm. To implement this aspect into 
-                our project, we have tested and altered it a plethora of times with different hand positions for it to recognize 
-                hand shape, instead of focusing mainly on background/the tester's skin color. Additionally, throughout the teaching 
-                of our machine, we have focused on multiple hand positions in relation to the body, despite not all being standard
-                in modern ASL. This helps those who do not have correct hand placement or those who are learning the language, so 
-                that the machine is able to register those signs.
+                Our project, focused on American Sign Language (ASL) recognition, draws inspiration from Buolamwini’s ideals. We aim to 
+                create algorithms that give mute and deaf individuals a “voice” in spaces where interpreters are unavailable, helping them 
+                communicate more freely in everyday and professional life. This project is not only technical but also ethical: it embodies 
+                the principle that technology should empower marginalized communities rather than exclude them.
             </p>
 
+            <h2>Project Goals</h2>
+            <p>
+                <ul>
+                    <li>Accessibility: Enable communication for deaf, mute, and partially hearing individuals without requiring an interpreter.</li>
+                    <li>Inclusivity: Design algorithms that recognize diverse hand positions and variations, ensuring learners and non-standard
+                        users are not penalized.</li>
+                    <li>Justice in Technology: Embed Buolamwini’s call for fairness, transparency, and accountability into every stage of development.</li>
+                </ul>
+            </p>
+            <h2>Incorporating Buolamwini’s Ideals</h2>
             <p> 
-                
+                Buolamwini prescribes a lifecycle approach to accountability: audit models before and after deployment, document datasets, measure performance 
+                across demographic slices, and involve impacted communities. We incorporated these principles in several ways:
+                <ul>
+                    <li>Dataset Diversity: Instead of privileging background or skin tone, we trained the model on varied hand positions.</li>
+                    <li>Transparency: We documented training decisions, including which letters were attempted, which hand positions were included,
+                        and which limitations were encountered.</li>
+                    <li>Community-Centered Design: Though early in development, we envision involving deaf and mute individuals directly in testing and feedback.</li>
+                    <li>Performance Across Variations: By including non-standard hand placements, we ensured the system could serve learners and those with physical differences.</li>
+                </ul>
             </p>
-
+            <p>These decisions were deliberate: we prioritized the diversity of hand shapes and positions over background uniformity, recognizing 
+                that users will inevitably present a wide range of lighting conditions, skin tones, and camera qualities. The goal was to reduce 
+                exclusion and improve real-world usability, even at the prototype stage.
+            </p>
+            <h2>Technical Process</h2>
+            <p>
+                We used Google’s Teachable Machine to prototype recognition. The tool allowed us to train on snapshots of hand shapes but not motion.
+                We tested multiple hand positions for letters at the beginning of the alphabet, but the model became too large to export fully. Despite 
+                these constraints, we prioritized inclusivity over efficiency.
+            </p>
+            <p>
+                This mirrors Buolamwini’s lesson that justice must guide design choices. Even when technical limitations exist, we chose to emphasize 
+                accessibility for diverse users rather than optimizing for speed or compactness. Our documentation includes the classes trained, dataset 
+                counts per class, environmental conditions (lighting/background), and known edge cases. This recordkeeping supports future audits and 
+                collaborative improvement.
+            </p>
+            <h2>Limitations and Future Directions</h2>
+            <ul>
+                <li>Motion Recognition: Teachable Machine cannot capture dynamic signs, limiting effectiveness for most ASL words.</li>
+                <li>Model Size: Large datasets became difficult to save and export.</li>
+                <li>Scope: Only a subset of letters was tested due to technical constraints.</li>
+            </ul>
+            
+            <p>
+                These limitations highlight Buolamwini’s point that accuracy in controlled conditions is not enough. Real-world utility requires 
+                robustness, scalability, and inclusivity. Future iterations should move beyond snapshot-based tools toward platforms capable of 
+                video and temporal recognition, such as sequence models or transformer-based video encoders.
+            </p>
+            <p>
+                We also plan to expand demographic and situational testing: users with different hand sizes and skin tones, varied lighting environments,
+                camera qualities, and levels of ASL proficiency. Establishing clear benchmarks and error analyses across these slices will help prevent 
+                differential performance that could harm the users most in need of assistance.
+            </p>
+            <h2>Lessons from Buolamwini's Works</h2>
+            <p>
+                <ul>
+                    <li>Bias is Structural, Not Accidental: Just as facial recognition systems failed for darker-skinned women, ASL recognition could
+                        fail for users with non-standard hand positions or different skin tones.</li>
+                    <li>Accuracy does not equal Justice: A model that recognizes signs perfectly for one group but fails for another is not “successful.”</li>
+                    <li>Transparency Builds Trust: Documenting datasets and training decisions ensures accountability and allows others to critique and 
+                        improve the system.</li>
+                    <li>Community Participation is Essential: Impacted groups must guide design. For ASL recognition, deaf and mute individuals should shape 
+                        priorities and evaluate usability.</li>
+                    <li>Accountability Across the Lifecycle: Pre-deployment audits, ongoing evaluation, and post-deployment monitoring are required to catch drift and inequities.</li>
+                </ul>
+            Most importantly, we learned that machine learning is never neutral. Every choice, such as which signs to include, which hand positions to train, which platform to use,
+            embeds values. By consciously embedding values of accessibility and justice, we align our project with Buolamwini’s vision of technology as a civil rights tool.
+            </p>
+            <h2>Ethical Responsibility</h2>
+            <p>
+                Another lesson from Unmasking AI that resonates with us is the importance of ethical responsibility in deployment. Buolamwini warns against rushing 
+                systems into real-world use without adequate safeguards. In our project, we recognize that premature deployment could lead to miscommunication in 
+                critical contexts. Therefore, we emphasize transparency about limitations, ongoing evaluation, and a willingness to pause deployment until the system 
+                meets fairness benchmarks. This reflects her call for “regulatory guardrails” and accountability across the lifecycle. By embedding these values, our 
+                project becomes not only a technical prototype but also a statement of ethical responsibility.
+            </p>
+            <h2>Reflection and Commitment</h2>
+            <p>
+                Buolamwini reframes machine learning progress as not just making models bigger or faster, but making them more just. Our project embodies this by 
+                prioritizing inclusivity, documenting decisions, and envisioning community involvement. While technical limitations remain, the guiding principle is 
+                clear: technology must serve those historically excluded.
+            </p>
+            <h2>Conclusion</h2>
+            <p>
+                Our ASL recognition project is both a technical prototype and a moral commitment. It seeks to empower deaf and mute individuals by giving them a 
+                stronger voice in society. By incorporating Buolamwini’s ideals, including inclusive datasets, transparency, accountability, and community participation,
+                we strive to ensure that our algorithm does not replicate exclusion but instead dismantles barriers.
+            </p>
+            <p>
+                The lessons from Dr. Buolamwini's remind us that progress in machine learning is not measured solely by accuracy or efficiency, but by justice. In 
+                reflecting on this activity, we see our project as part of a broader movement to unmask bias, confront inequity, and build technology that truly serves 
+                all people.
+            </p>
             <blockquote class="mlquote">
     Machine learning isn’t neutral by default; it inherits our choices.
     If we want fair outcomes, we have to design for them.
