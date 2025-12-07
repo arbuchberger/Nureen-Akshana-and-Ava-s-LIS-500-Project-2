@@ -1,6 +1,11 @@
-/* ===== Global Styles (apply everywhere) ===== */
+/* ===== Global Reset & Base Styles ===== */
+html,
 body {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Arsenica Antiqua', serif;
   background-image: url("images/realpweb.jpg");
   background-size: cover;
@@ -21,9 +26,10 @@ p {
   font-size: 20px;
 }
 
-/* Navigation bar */
+/* ===== Navigation Bar ===== */
 nav {
   background: #5f033c;
+  margin: 0;
   padding: 10px;
 }
 
@@ -45,13 +51,47 @@ nav ul li a {
   font-size: 20px;
   font-weight: bold;
 }
+
 nav ul li a:hover {
-  color:#4babb8;
+  color: #4babb8;
   text-decoration: underline;
 }
 
-/* ===== Page-specific Styles ===== */
-/* ===== Home with overlayed text ===== */
+/* ===== Shared “Glass Card” Overlay Style ===== */
+/* Any element in this list will get the same card layout */
+body.home .info-card,
+.member,
+.techHero,
+body.resources .resourcesIntro,
+body.resources .resourcesList,
+body.resources ul.resourcesList,
+body.resources .video-section,
+body.resources .video-container,
+body.mlpage .mlIntro,
+body.mlpage .mlSection,
+body.mlpage .video-container,
+body.teachable header,
+body.teachable .video-container-teachable,
+body.teachable .teachableIntro,
+body.teachable .teachableInfo,
+body.teachable .teachableASL {
+  width: 85%;
+  max-width: 1100px;
+  margin: 16px auto;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: #fff;
+  border: 2px solid #5f033c;
+  border-radius: 12px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* ===== Home Page ===== */
+
+/* Intro card with extra overlay */
 body.home .home-content {
   position: relative;
   max-width: 920px;
@@ -72,10 +112,9 @@ body.home .home-content::before {
   border-radius: 12px;
 }
 
-/* center text on top */
+/* center text on top of overlay */
 body.home .home-content {
   position: relative;
-  /* sits above overlay */
   z-index: 1;
   text-align: center;
   color: white;
@@ -83,18 +122,8 @@ body.home .home-content {
   margin: 0 auto;
 }
 
+/* Info card uses shared glass-card styles already */
 body.home .info-card {
-  max-width: 900px;
-  margin: 20px auto 36px;
-  padding: 20px 22px;
-  border-radius: 12px;
-
-  /* overlay look */
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  color: #fff;
-  line-height: 1.6;
   text-align: center;
 }
 
@@ -118,24 +147,19 @@ body.home .ext-btn {
   font-size: 25px;
   font-weight: bold;
 }
+
+/* Home page links (content only) */
 body.home a {
-  color: #fff; 
+  color: #fff;
   text-decoration: none;
 }
+
 body.home a:hover {
   color: #4babb8;
 }
 
-/* Mobile tweak */
-@media (max-width: 720px) {
-  body.home .info-card {
-    padding: 16px 14px;
-  }
-}
-
-/* === HERO IMAGE: center + shrink (works for both patterns) === */
+/* HERO IMAGE: center + shrink */
 body.home .homeImage {
-  /* works if .homeImage is wrapper or the <img> */
   display: block;
   margin: 20px auto;
   max-width: 900px;
@@ -147,11 +171,9 @@ body.home img.homeImage {
   display: block;
   margin: 0 auto;
   width: auto !important;
-  /* override old width:100% */
   height: auto !important;
   max-width: min(90vw, 900px);
   max-height: 50vh;
-  /* adjust this to taste */
   object-fit: contain;
   border-radius: 12px;
 }
@@ -168,12 +190,12 @@ body.home img.homeImage {
   }
 }
 
-/* add space under the nav only on the Home page */
+/* Space under nav only on Home page */
 body.home nav {
   margin-bottom: 24px;
 }
 
-
+/* Horizontal rule */
 hr {
   border: 2px solid #5f033c;
   border-top: 2px solid #5f033c;
@@ -181,23 +203,14 @@ hr {
   width: 85%;
 }
 
-/* Shared layout for member and techHero sections */
+/* ===== About / Tech Hero Cards ===== */
 .member,
 .techHero {
   display: flex;
   align-items: center;
-  /* vertical centering for the photo */
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
-  width: 85%;
-  margin: 24px auto;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 2px solid #5f033c;
-  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -258,41 +271,13 @@ hr {
 .techHero a:hover,
 .member a:hover {
   color: #b84b91;
-  /* lighter hover tone */
   text-decoration: underline;
 }
 
-/*===== Resources Page =====*/
-/* Resources page overlays */
-body.resources .resourcesIntro,
-body.resources .resourcesList {
-  width: 85%;
-  max-width: 1100px;
-  margin: 16px auto;
-  /* places them below the heading */
-  padding: 20px 22px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  color: #fff;
-  border: 2px solid #5f033c;
-  border-radius: 12px;
-  line-height: 1.6;
-  text-align: center;
-}
+/* ===== Resources Page ===== */
 
-/* Resources: centered lines with bullets */
+/* Resources list as centered custom bullets */
 body.resources ul.resourcesList {
-  width: 85%;
-  max-width: 1100px;
-  margin: 16px auto;
-  padding: 20px 22px;
-  background: rgba(0, 0, 0, .35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 2px solid #5f033c;
-  border-radius: 12px;
-  line-height: 1.6;
   list-style: none;
   text-align: center;
 }
@@ -304,7 +289,6 @@ body.resources ul.resourcesList li {
 
 body.resources ul.resourcesList li::before {
   content: "•";
-  /* custom bullet */
   display: inline-block;
   margin-right: .5em;
 }
@@ -319,260 +303,19 @@ body.resources ul.resourcesList a:hover {
   text-decoration: underline;
 }
 
-  /* ===== Mobile / Small Screens ===== */
-  @media (max-width: 860px) {
-
-    /* Global text */
-    h1,
-    h2 {
-      margin-top: 16px;
-      padding: 0 12px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    /* Nav: keep centered, give touch-friendly spacing */
-    nav {
-      padding: 12px;
-    }
-
-    nav ul {
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    nav ul li {
-      margin: 6px 10px;
-    }
-
-    nav ul li a {
-      display: inline-block;
-      padding: 6px 8px;
-    }
-
-    /* Shared card width tighter on small screens */
-    .member,
-    .techHero,
-    body.resources .resourcesIntro,
-    body.resources .resourcesList,
-    body.resources ul.resourcesList,
-    body.home .homeImage,
-    hr {
-      width: 94%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Member/Tech hero: stack image over text */
-    .member,
-    .techHero {
-      flex-direction: column;
-      text-align: center;
-      padding: 16px;
-      gap: 16px;
-    }
-
-    .member-photo,
-    .techHero-photo {
-      flex: 0 0 auto;
-      width: 100%;
-      justify-content: center;
-    }
-
-    .member-photo img,
-    .techHero-photo img {
-      max-width: 360px;
-      height: auto;
-      aspect-ratio: 3 / 3.2;
-      object-fit: cover;
-    }
-
-    .member-text,
-    .techHero-text {
-      flex: 1 1 auto;
-      font-size: 20px;
-      line-height: 1.6;
-      padding: 0 6px;
-    }
-
-    /* Home overlay cards */
-    body.home .home-content {
-      margin: 56px auto 20px;
-      padding: 18px 16px;
-      max-width: 94%;
-    }
-
-    body.home .info-card {
-      margin: 16px auto 28px;
-      padding: 16px 14px;
-    }
-
-    body.home .info-actions {
-      gap: 8px;
-    }
-
-    body.home .ext-btn {
-      padding: 10px 14px;
-      font-size: 15px;
-    }
-
-    /* Resources list: bigger tap area, centered lines already set */
-    body.resources ul.resourcesList li {
-      margin: 10px 0;
-    }
-
-    body.resources ul.resourcesList a {
-      display: inline-block;
-      padding: 6px 8px;
-    }
-
-    /* Softer effects on mobile GPUs */
-    .member,
-    .techHero,
-    body.resources .resourcesIntro,
-    body.resources .resourcesList,
-    body.resources ul.resourcesList,
-    body.home .info-card {
-      backdrop-filter: blur(1.5px);
-      -webkit-backdrop-filter: blur(1.5px);
-    }
-  }
-
-  @media (max-width: 600px) {
-
-    /* Slightly smaller headings & text */
-    h1 {
-      font-size: 28px;
-    }
-
-    h2 {
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 17px;
-    }
-
-    /* Nav becomes two rows if needed */
-    nav ul {
-      justify-content: center;
-    }
-
-    /* Home hero image keeps radius, fills width */
-    body.home .homeImage {
-      width: 94%;
-      margin: 14px auto;
-    }
-
-    /* Borders & shadows lighter for compact look */
-    .member,
-    .techHero,
-    body.resources .resourcesIntro,
-    body.resources .resourcesList,
-    body.resources ul.resourcesList {
-      border-width: 1.5px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
-    }
-
-    hr {
-      width: 94%;
-      margin: 24px auto;
-      border-width: 1.5px;
-    }
-  }
-
-  @media (max-width: 420px) {
-
-    /* Tighter typography on very small phones */
-    h1 {
-      font-size: 24px;
-    }
-
-    h2 {
-      font-size: 20px;
-    }
-
-    p,
-    .member-text,
-    .techHero-text {
-      font-size: 16px;
-    }
-
-    nav ul li {
-      margin: 4px 6px;
-    }
-
-    nav ul li a {
-      padding: 6px 6px;
-      font-weight: 600;
-    }
-
-    /* Buttons readable but compact */
-    body.home .ext-btn {
-      padding: 9px 12px;
-      font-size: 14px;
-    }
-
-    /* Images: limit height to avoid tall scroll on first paint */
-    .member-photo img,
-    .techHero-photo img {
-      max-width: 320px;
-      max-height: 300px;
-    }
-  }
-
-  /* ===== Motion & heavy effects accessibility ===== */
-  @media (prefers-reduced-motion: reduce) {
-
-    .member:hover,
-    .techHero:hover {
-      transform: none;
-      transition: none;
-    }
-  }
-
-  @media (prefers-contrast: more) {
-
-    .member,
-    .techHero,
-    body.resources .resourcesIntro,
-    body.resources .resourcesList,
-    body.resources ul.resourcesList,
-    body.home .info-card {
-      background: rgba(0, 0, 0, 0.5);
-      border-color: #a34783;
-      /* slightly brighter edge for contrast */
-    }
-  }
-
-  /* ===== Resources Page: Video Section ===== */
-body.resources .video-section {
-  width: 85%;
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 20px 22px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 2px solid #5f033c;
-  border-radius: 12px;
-  color: #fff;
-  text-align: center;
+/* Video caption on resources page */
+body.resources .video-caption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #ddd;
 }
 
-body.resources .video-section h2 {
-  margin-bottom: 12px;
-  color: #fff;
-}
-
+/* Make resources video responsive */
 body.resources .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: hidden;
-  max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -588,58 +331,48 @@ body.resources .video-container video {
   border-radius: 8px;
 }
 
-body.resources .video-caption {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #ddd;
-}
-
-/*===== Teachable Model Page =====*/
+/* ===== Teachable Model Page ===== */
 body.teachable header,
 body.teachable .video-container-teachable,
 body.teachable .teachableIntro,
 body.teachable .teachableInfo,
 body.teachable .teachableASL {
-  width: 85%;
-  max-width: 1100px;
-  margin: 16px auto;
-  padding: 20px 22px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  color: #fff;
-  border: 2px solid #5f033c;
-  border-radius: 12px;
-  line-height: 1.6; 
   font-size: 20px;
   text-align: center;
 }
-body.teachable header h1,
-body.teachable .teachableIntro h2 {
+
+/* tighten gap between h1/h2 */
+body.teachable header h1 {
   margin-bottom: 6px;
 }
-body.teachable header h2,
-body.teachable .teachableIntro p {
+
+body.teachable header h2 {
   margin-top: 0;
 }
+
+/* Teachable links */
 body.teachable a {
-  color: #fff; 
+  color: #fff;
   text-decoration: underline;
 }
+
 body.teachable a:hover {
   color: #4babb8;
 }
+
+/* ASL image sizing */
 body.teachable .teachableASL img {
-  max-width: 500px;   
-  width: 100%;        
-  height: auto;       
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   display: block;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
-/* Center the video */
+
+/* Center the video box */
 body.teachable .video-container-teachable {
   display: flex;
-  justify-content: center; /* center horizontally */
+  justify-content: center;
 }
 
 body.teachable .video-container-teachable video {
@@ -648,9 +381,10 @@ body.teachable .video-container-teachable video {
   border: 2px solid #5f033c;
   border-radius: 8px;
 }
-/*===== Machine Learning Page =====*/
+
+/* ===== Machine Learning Page ===== */
 body.mlpage {
-  font-size: 20px;        
+  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -667,53 +401,19 @@ body.mlpage h2 {
 
 body.mlpage p,
 body.mlpage li {
-  font-size: 20px;       
+  font-size: 20px;
 }
 
+/* ML sections use shared card */
 body.mlpage .mlIntro,
-body.mlpage .mlSection {
-  width: 85%;
-  max-width: 1100px;
-  margin: 16px auto;          /* centers the box */
-  padding: 20px 22px;         /* inside spacing */
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  color: #fff;
-  border: 2px solid #5f033c;
-  border-radius: 12px;
-  line-height: 1.6;
-  text-align: center;         /* same as resources page */
-  box-sizing: border-box;
-}
-
-/* Blockquote styling (like ML quotes on resources page) */
-body.mlpage .mlquote {
-  width: 85%;
-  max-width: 1100px;
-  margin: 16px auto;
-  padding: 20px 22px;
-  background: rgba(95, 3, 60, 0.5);
-  border-left: 4px solid #b84b91;
-  color: #fff;
-  border-radius: 8px;
-  font-style: italic;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* Video container styled like resources page */
+body.mlpage .mlSection,
 body.mlpage .video-container {
-  width: 85%;
-  max-width: 1100px;
-  margin: 16px auto;
-  padding: 0;                 /* optional: videos usually don't need extra padding */
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 2px solid #5f033c;
-  border-radius: 12px;
   text-align: center;
+}
+
+/* ML video container */
+body.mlpage .video-container {
+  padding: 0;
 }
 
 body.mlpage .video-container video {
@@ -722,10 +422,11 @@ body.mlpage .video-container video {
   border-radius: 8px;
 }
 
+/* ===== Buttons ===== */
 .teachable-btn {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #5f033c; /* same as your nav color */
+  background-color: #5f033c;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
@@ -734,5 +435,216 @@ body.mlpage .video-container video {
 }
 
 .teachable-btn:hover {
-  background-color: #b84b91; /* lighter hover color */
+  background-color: #b84b91;
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 860px) {
+
+  h1,
+  h2 {
+    margin-top: 16px;
+    padding: 0 12px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  nav {
+    padding: 12px;
+  }
+
+  nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 6px 10px;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    padding: 6px 8px;
+  }
+
+  .member,
+  .techHero,
+  body.resources .resourcesIntro,
+  body.resources .resourcesList,
+  body.resources ul.resourcesList,
+  body.home .homeImage,
+  hr {
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .member,
+  .techHero {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .member-photo,
+  .techHero-photo {
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .member-photo img,
+  .techHero-photo img {
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 3 / 3.2;
+    object-fit: cover;
+  }
+
+  .member-text,
+  .techHero-text {
+    flex: 1 1 auto;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 6px;
+  }
+
+  body.home .home-content {
+    margin: 56px auto 20px;
+    padding: 18px 16px;
+    max-width: 94%;
+  }
+
+  body.home .info-card {
+    margin: 16px auto 28px;
+    padding: 16px 14px;
+  }
+
+  body.home .info-actions {
+    gap: 8px;
+  }
+
+  body.home .ext-btn {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  body.resources ul.resourcesList li {
+    margin: 10px 0;
+  }
+
+  body.resources ul.resourcesList a {
+    display: inline-block;
+    padding: 6px 8px;
+  }
+
+  .member,
+  .techHero,
+  body.resources .resourcesIntro,
+  body.resources .resourcesList,
+  body.resources ul.resourcesList,
+  body.home .info-card {
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+  }
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  body.home .homeImage {
+    width: 94%;
+    margin: 14px auto;
+  }
+
+  .member,
+  .techHero,
+  body.resources .resourcesIntro,
+  body.resources .resourcesList,
+  body.resources ul.resourcesList {
+    border-width: 1.5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+  }
+
+  hr {
+    width: 94%;
+    margin: 24px auto;
+    border-width: 1.5px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p,
+  .member-text,
+  .techHero-text {
+    font-size: 16px;
+  }
+
+  nav ul li {
+    margin: 4px 6px;
+  }
+
+  nav ul li a {
+    padding: 6px 6px;
+    font-weight: 600;
+  }
+
+  body.home .ext-btn {
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+
+  .member-photo img,
+  .techHero-photo img {
+    max-width: 320px;
+    max-height: 300px;
+  }
+}
+
+/* ===== Accessibility Tweaks ===== */
+@media (prefers-reduced-motion: reduce) {
+  .member:hover,
+  .techHero:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .member,
+  .techHero,
+  body.resources .resourcesIntro,
+  body.resources .resourcesList,
+  body.resources ul.resourcesList,
+  body.home .info-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: #a34783;
+  }
 }
