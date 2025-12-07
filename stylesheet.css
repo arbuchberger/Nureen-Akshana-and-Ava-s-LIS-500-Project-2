@@ -13,8 +13,8 @@ body {
 h1,
 h2 {
   text-align: center;
-  margin-top: 20px;
-  padding: 0 16px;
+  margin-top: 16px;
+  padding: 0;
 }
 
 p {
@@ -42,17 +42,15 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 20px;
   font-weight: bold;
 }
-
 nav ul li a:hover {
+  color:#4babb8;
   text-decoration: underline;
 }
 
 /* ===== Page-specific Styles ===== */
-
-/* Home page */
-
 /* ===== Home with overlayed text ===== */
 body.home .home-content {
   position: relative;
@@ -62,6 +60,7 @@ body.home .home-content {
   background: rgba(0, 0, 0, 0.28);
   border-radius: 12px;
   min-height: auto;
+  text-decoration: none;
 }
 
 /* subtle dark overlay for readability*/
@@ -114,14 +113,17 @@ body.home .ext-btn {
   padding: 10px 16px;
   border-radius: 6px;
   background: #5f033c;
-  /* your nav color */
   color: #fff;
   text-decoration: none;
+  font-size: 25px;
   font-weight: bold;
 }
-
-body.home .ext-btn:hover {
-  background: #7a205e;
+body.home a {
+  color: #fff; 
+  text-decoration: none;
+}
+body.home a:hover {
+  color: #4babb8;
 }
 
 /* Mobile tweak */
@@ -213,7 +215,6 @@ hr {
   justify-content: center;
   align-items: center;
   flex: 0 0 320px;
-  /* keeps image area consistent */
 }
 
 /* Image itself */
@@ -232,12 +233,12 @@ hr {
 .member-text,
 .techHero-text {
   flex: 1 1 400px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   text-align: center;
   padding: 8px;
   color: white;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .member-text ul,
@@ -250,7 +251,8 @@ hr {
 .techHero a,
 .member a {
   color: white;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .techHero a:hover,
@@ -291,14 +293,12 @@ body.resources ul.resourcesList {
   border: 2px solid #5f033c;
   border-radius: 12px;
   line-height: 1.6;
-
   list-style: none;
-  /* turn off native bullets */
   text-align: center;
-  /* center each line */
 }
 
 body.resources ul.resourcesList li {
+  font-size: 20px;
   margin: 8px 0;
 }
 
@@ -392,7 +392,7 @@ body.resources ul.resourcesList a:hover {
     .member-text,
     .techHero-text {
       flex: 1 1 auto;
-      font-size: 17px;
+      font-size: 20px;
       line-height: 1.6;
       padding: 0 6px;
     }
@@ -594,49 +594,12 @@ body.resources .video-caption {
   color: #ddd;
 }
 
-.mlquote {
-  color: #5f033c; /* or any color */
-  font-weight: bold;
-}
-
-body.mlpage .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-body.mlpage .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 8px;
-}
-
-.video-container-teachable {
-    display: flex;
-    justify-content: center; /* centers horizontally */
-    margin: 20px 0; /* optional spacing above and below */
-}
-
-/*TEACHABLE MACHINE PAGE
-
-/* Make the video responsive */
-.video--container-teachable video {
-    max-width: 100%; /* prevents video from overflowing the page */
-    height: auto;    /* keeps the aspect ratio */
-    border: 2px solid #ccc; /* optional: adds a border to the video */
-    border-radius: 8px;     /* optional: rounded corners */
-}
-
 /*===== Teachable Model Page =====*/
 body.teachable header,
-body.teachable .video-container-teachable {
+body.teachable .video-container-teachable,
+body.teachable .teachableIntro,
+body.teachable .teachableInfo,
+body.teachable .teachableASL {
   width: 85%;
   max-width: 1100px;
   margin: 16px auto;
@@ -647,10 +610,32 @@ body.teachable .video-container-teachable {
   color: #fff;
   border: 2px solid #5f033c;
   border-radius: 12px;
-  line-height: 1.6;
+  line-height: 1.6; 
+  font-size: 20px;
   text-align: center;
 }
-
+body.teachable header h1,
+body.teachable .teachableIntro h2 {
+  margin-bottom: 6px;
+}
+body.teachable header h2,
+body.teachable .teachableIntro p {
+  margin-top: 0;
+}
+body.teachable a {
+  color: #fff; 
+  text-decoration: underline;
+}
+body.teachable a:hover {
+  color: #4babb8;
+}
+body.teachable .teachableASL img {
+  max-width: 500px;   
+  width: 100%;        
+  height: auto;       
+  display: block;
+  margin: 0 auto;  
+}
 /* Center the video */
 body.teachable .video-container-teachable {
   display: flex;
@@ -663,21 +648,26 @@ body.teachable .video-container-teachable video {
   border: 2px solid #5f033c;
   border-radius: 8px;
 }
-
-body.teachable .teachableIntro,
-body.teachable .teachableInfo {
-  width: 85%;
-  max-width: 1100px;
-  margin: 16px auto;
-  padding: 20px 22px;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  color: #fff;
-  border: 2px solid #5f033c;
-  border-radius: 12px;
+/*===== Machine Learning Page =====*/
+body.mlpage {
+  font-size: 20px;        
   line-height: 1.6;
-  text-align: center;
+}
+
+body.mlpage h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+body.mlpage h2 {
+  font-size: 24px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+body.mlpage p,
+body.mlpage li {
+  font-size: 20px;       
 }
 
 body.mlpage .mlIntro,
