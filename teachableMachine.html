@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Try Our Model!</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body class="teachable">
 
   <!-- Navigation Bar -->
@@ -28,66 +29,77 @@
       <h1>Sign Language Interpreter</h1>
       <h2>Watch our demo below!</h2>
     </header>
-<!-- Resources Intro -->
+    <!-- Resources Intro -->
     <section class="teachableInfo">
       <p>
-        Our project, focused on American Sign Language (ASL) recognition, draws inspiration from Buolamwini’s ideals. We aim to 
-        create algorithms that give mute and deaf individuals a “voice” in spaces where interpreters are unavailable, helping them 
-        communicate more freely in everyday and professional life. This project is not only technical but also ethical: it embodies 
+        Our project, focused on American Sign Language (ASL) recognition, draws inspiration from Buolamwini’s ideals. We
+        aim to
+        create algorithms that give mute and deaf individuals a “voice” in spaces where interpreters are unavailable,
+        helping them
+        communicate more freely in everyday and professional life. This project is not only technical but also ethical:
+        it embodies
         the principle that technology should empower marginalized communities rather than exclude them.
     </section>
-    
+
     <!-- ASL Reference -->
     <section class="teachableASL">
       <h2>ASL Alphabet Reference</h2>
       <p>
-        This is an example of the ASL alphabet. You can take a look and try these signs with our model below. To find out more
-        about ASL, <a href="https://www.lifeprint.com/" target="_blank">click here</a>.  <!-- target blank so that it opens in new tab -->
+        This is an example of the ASL alphabet. You can take a look and try these signs with our model below. To find
+        out more
+        about ASL, <a href="https://www.lifeprint.com/" target="_blank">click here</a>.
+        <!-- target blank so that it opens in new tab -->
       </p>
       <figure>
         <img src="images/ASL.jpg" alt="American Sign Language alphabet chart">
         <figcaption>
           ASL alphabet reference image. Source:
-          <a href="https://www.gerardaflaguecollection.com/products/american-sign-language-asl-alphabet-abc-poster.html" target="_blank">Gerald Aflague Collection</a>
+          <a href="https://www.gerardaflaguecollection.com/products/american-sign-language-asl-alphabet-abc-poster.html"
+            target="_blank">Gerald Aflague Collection</a>
         </figcaption>
       </figure>
     </section>
- 
+
     <!-- Video Section -->
     <section class="video-container-teachable">
       <video controls>
-        <source src="images/Teachable.mp4" type="video/mp4">
+        <source src="images/demo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </section>
 
-     <section class="teachableIntro">
-            <h2>Technical Process</h2>
-            <p>
-                We used Google’s Teachable Machine to prototype recognition. The tool allowed us to train on snapshots of hand shapes but not motion.
-                We tested multiple hand positions for letters at the beginning of the alphabet, but the model became too large to export fully. Despite 
-                these constraints, we prioritized inclusivity over efficiency.
-            </p>
-            <p>
-                This mirrors Buolamwini’s lesson that justice must guide design choices. Even when technical limitations exist, we chose to emphasize 
-                accessibility for diverse users rather than optimizing for speed or compactness. Our documentation includes the classes trained, dataset 
-                counts per class, and environmental conditions (lighting/background). This recordkeeping supports future audits and 
-                collaborative improvement.
-            </p>
-        </section>
+    <section class="teachableIntro">
+      <h2>Technical Process</h2>
+      <p>
+        We used Google’s Teachable Machine to prototype recognition. The tool allowed us to train on snapshots of hand
+        shapes but not motion.
+        We tested multiple hand positions for letters at the beginning of the alphabet, but the model became too large
+        to export fully. Despite
+        these constraints, we prioritized inclusivity over efficiency.
+      </p>
+      <p>
+        This mirrors Buolamwini’s lesson that justice must guide design choices. Even when technical limitations exist,
+        we chose to emphasize
+        accessibility for diverse users rather than optimizing for speed or compactness. Our documentation includes the
+        classes trained, dataset
+        counts per class, and environmental conditions (lighting/background). This recordkeeping supports future audits
+        and
+        collaborative improvement.
+      </p>
+    </section>
 
-        <section class="teachableIntro">
-          <h2>Try it yourself!</h2>
-          <p>
-            <a link="https://teachablemachine.withgoogle.com/models/LVC-SbUnt/" target="_blank">Open the Model</a>
-          </p>
-        </section>
-    
+    <section class="teachableIntro">
+      <h2>Try it yourself!</h2>
+      <p>
+        <a href="https://teachablemachine.withgoogle.com/models/LVC-SbUnt/" target="_blank">
+          Open the Model
+        </a>
+      </p>
+    </section>
+
+
   </main>
 
 </body>
+
 </html>
-
-
-
-
