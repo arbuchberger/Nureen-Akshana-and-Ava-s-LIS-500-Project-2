@@ -73,7 +73,7 @@
             <p>
                 These decisions were deliberate: we prioritized the diversity of hand shapes and positions over background uniformity, recognizing 
                 that users will inevitably present a wide range of lighting conditions, skin tones, and camera qualities. The goal was to reduce 
-                exclusion and improve real-world usability, even at the prototype stage.
+                exclusion and improve real-world usability, even at the prototype stage. 
             </p>
         </section>
 
@@ -83,13 +83,20 @@
             <p>
                 We used Google’s Teachable Machine to prototype recognition. The tool allowed us to train on snapshots of hand shapes but not motion.
                 We tested multiple hand positions for letters at the beginning of the alphabet, but the model became too large to export fully. Despite 
-                these constraints, we prioritized inclusivity over efficiency.
+                these constraints, we prioritized inclusivity over efficiency. 
             </p>
             <p>
                 This mirrors Buolamwini’s lesson that justice must guide design choices. Even when technical limitations exist, we chose to emphasize 
                 accessibility for diverse users rather than optimizing for speed or compactness. Our documentation includes the classes trained, dataset 
                 counts per class, and environmental conditions (lighting/background). This recordkeeping supports future audits and 
                 collaborative improvement.
+            </p>
+            <p> 
+                However, we did encounter some difficulties. For instance, the model kept registering the person doing the signs as the main target,
+                rather than the signs themselves. This would create racial biases and other biases that apply toward someone who does not look like
+                the subject. Therefore, we switched to using online images to train it with just the hand signs without the person in the background.
+                Although, even then, our machine has not been that accurate, and we had some limitations on how many letters we can train it on, which 
+                is unfortunately only four (A, B, C, D). Additionally, we must train it more since we did not input many images for it.
             </p>
         </section>
 
